@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite preview --port 3000"
+    "start": "http-server dist -p 3000"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
