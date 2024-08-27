@@ -4,8 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "serve dist",
-    "build": "serve dist"
+    "start": "serve dist"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
