@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
+    "dev": "vite",
     "start": "http-server dist -p 3000"
   },
   "devDependencies": {
