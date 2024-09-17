@@ -4,678 +4,507 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="./favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consulta Meu CPF</title>
+    <title>Neela</title>
   </head>
-
   <body>
-    <div class="relative bg-gray-50" style="">
-      <div class="absolute bottom-0 right-0 overflow-hidden lg:inset-y-0">
-        <img
-          class="w-auto h-full"
-          src="https://d33wubrfki0l68.cloudfront.net/1e0fc04f38f5896d10ff66824a62e466839567f8/699b5/images/hero/3/background-pattern.png"
-          alt=""
-        />
-      </div>
-
-      <header class="relative py-4 md:py-6">
-        <div class="container px-4 mx-auto sm:px-6 lg:px-8">
+    <div class="bg-[url('./ocean.jpg')] bg-cover">
+      <header class="py-4 sm:py-6" x-data="{expanded: false}">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div class="flex items-center justify-between">
-            <div class="flex-shrink-0">
-              <a
-                href="#"
-                title=""
-                class="flex rounded outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
-              >
-                <img class="w-auto h-16" src="./favicon.png" alt="" />
+            <div class="shrink-0">
+              <a href="#" title="" class="flex">
+                <img class="w-auto h-10" src="logo.png" alt="" />
               </a>
             </div>
-
-            <div class="flex lg:hidden">
-              <button type="button" class="text-gray-900">
-                <svg
-                  class="w-7 h-7"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  ></path>
-                </svg>
+            <div class="flex md:hidden">
+              <button type="button" class="text-white" @click="expanded = !expanded" :aria-expanded="expanded">
+                <span x-show="!expanded" aria-hidden="true">
+                  <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                </span>
+                <span x-show="expanded" aria-hidden="true">
+                  <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </span>
               </button>
             </div>
-
-            <div
-              class="hidden lg:ml-auto lg:flex lg:items-center lg:space-x-8 xl:space-x-10"
-            >
-              <a
-                href="#"
-                title=""
-                class="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
-              >
-                Depoimentos
-              </a>
-
-              <a
-                href="#"
-                title=""
-                class="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
-              >
-                O que é score de crédito?
-              </a>
-
-              <a
-                href="#"
-                title=""
-                class="px-5 py-2 text-base font-bold leading-7 text-white transition-all duration-200 bg-rose-500 border border-transparent rounded-xl hover:bg-rose-400 font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-                role="button"
-              >
-                Consultar CPF
-              </a>
-            </div>
+            <nav class="hidden md:flex md:items-center md:justify-end md:space-x-12">
+              <a href="#" title="" class="text-base font-normal text-white transition-all duration-200 hover:text-gray-400"> Sobre nós </a>
+              <a href="#" title="" class="text-base font-normal text-white transition-all duration-200 hover:text-gray-400"> Serviços </a>
+              <a href="#" title="" class="text-base font-normal text-white transition-all duration-200 hover:text-gray-400"> Neela Bank </a>
+              <a href="#" title="" class="text-base font-normal text-white transition-all duration-200 hover:text-gray-400"> Carreiras </a>
+              <a href="#" title="" class="text-base font-normal text-white transition-all duration-200 hover:text-gray-400"> Contato </a>
+            </nav>
           </div>
+          <nav x-show="expanded" x-collapse>
+            <div class="flex flex-col pt-8 pb-4 space-y-6">
+              <a href="#" title="" class="text-base font-normal text-white transition-all duration-200 hover:text-gray-400"> Sobre nós </a>
+              <a href="#" title="" class="text-base font-normal text-white transition-all duration-200 hover:text-gray-400"> Serviços </a>
+              <a href="#" title="" class="text-base font-normal text-white transition-all duration-200 hover:text-gray-400"> Neela Bank </a>
+              <a href="#" title="" class="text-base font-normal text-white transition-all duration-200 hover:text-gray-400"> Carreiras </a>
+              <a href="#" title="" class="text-base font-normal text-white transition-all duration-200 hover:text-gray-400"> Contato </a>
+            </div>
+          </nav>
         </div>
       </header>
-
-      <section class="relative py-8">
-        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div
-            class="grid max-w-lg grid-cols-1 mx-auto lg:max-w-full lg:items-center lg:grid-cols-2 gap-y-12 lg:gap-x-8"
-          >
-            <div>
-              <div class="text-center lg:text-left">
-                <h1
-                  class="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:leading-tight lg:text-6xl font-pj"
-                >
-                  Consulte seu score grátis e saiba como aumentar sua pontuação
-                </h1>
-                <p class="mt-2 text-lg text-gray-600 sm:mt-8 font-inter">
-                  Organize melhor sua vida financeira, veja se você tem débitos
-                  no seu CPF e evite fraudes e uso indevido de seu CPF
-                </p>
-
-                <form action="#" method="POST" class="mt-8 sm:mt-10">
-                  <div
-                    class="relative p-2 sm:border sm:border-gray-400 group sm:rounded-xl sm:focus-within:ring-1 sm:focus-within:ring-gray-900 sm:focus-within:border-gray-900"
-                  >
-                    <input
-                      type="email"
-                      name=""
-                      id=""
-                      placeholder="Digite o seu CPF"
-                      class="block w-full px-4 py-4 text-gray-900 placeholder-gray-400 bg-transparent border border-gray-400 outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900 rounded-xl sm:border-none sm:focus:ring-0 sm:focus:border-transparent"
-                      required=""
-                    />
-                    <div
-                      class="mt-4 sm:mt-0 sm:absolute sm:inset-y-0 sm:right-0 sm:flex sm:items-center sm:pr-2"
-                    >
-                      <button
-                        type="submit"
-                        class="inline-flex px-6 py-3 text-lg font-bold text-white transition-all duration-200 bg-rose-500 rounded-lg focus:outline-none focus:bg-rose-400 font-pj hover:bg-rose-400"
-                      >
-                        Consultar meu CPF
-                      </button>
-                    </div>
-                  </div>
-                </form>
+      <section class="py-12 sm:pb-16 lg:pb-20 xl:pb-24">
+        <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+          <div class="relative">
+            <div class="lg:w-2/3">
+              <h1 class="mt-6 text-4xl font-normal text-white sm:mt-10 sm:text-5xl lg:text-6xl xl:text-8xl">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-neela-bank-300 to-neela-bank-700">Somos Neela,</span>
+                <br /> seu oceano azul.
+              </h1>
+              <p class="max-w-lg mt-4 text-xl font-normal text-gray-400 sm:mt-8"> Pacotes com times de especialistas em diversas áreas para desenvolver o patrimônio </p>
+              <div class="relative inline-flex items-center justify-center mt-8 sm:mt-12 group">
+                <div class="absolute transition-all duration-200 rounded-full -inset-px bg-none"></div>
+                <a href="#" title="" class="relative inline-flex items-center justify-center px-8 py-3 text-base font-normal text-white bg-neela-bank-700 border border-none rounded-full" role="button"> Saiba mais sobre a o Neela Bank </a>
               </div>
-
-              <div
-                class="flex items-center justify-center mt-10 space-x-6 lg:justify-start sm:space-x-8"
-              >
-                <div class="flex items-center">
-                  <p
-                    class="text-3xl font-medium text-gray-900 sm:text-4xl font-pj"
-                  >
-                    100%
-                  </p>
-                  <p class="ml-3 text-sm text-gray-900 font-pj">
-                    consulta <br />grátis
-                  </p>
-                </div>
-
-                <div class="hidden sm:block">
-                  <svg
-                    class="text-gray-400"
-                    width="16"
-                    height="39"
-                    viewBox="0 0 16 39"
-                    fill="none"
-                    stroke="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <line
-                      x1="0.72265"
-                      y1="10.584"
-                      x2="15.7226"
-                      y2="0.583975"
-                    ></line>
-                    <line
-                      x1="0.72265"
-                      y1="17.584"
-                      x2="15.7226"
-                      y2="7.58398"
-                    ></line>
-                    <line
-                      x1="0.72265"
-                      y1="24.584"
-                      x2="15.7226"
-                      y2="14.584"
-                    ></line>
-                    <line
-                      x1="0.72265"
-                      y1="31.584"
-                      x2="15.7226"
-                      y2="21.584"
-                    ></line>
-                    <line
-                      x1="0.72265"
-                      y1="38.584"
-                      x2="15.7226"
-                      y2="28.584"
-                    ></line>
+              <div>
+                <div class="inline-flex items-center pt-6 mt-8 border-t border-gray-800 sm:pt-10 sm:mt-14">
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 7.00003H21M21 7.00003V15M21 7.00003L13 15L9 11L3 17" stroke="url(#a)" stroke-linecap="round" stroke-linejoin="round" />
+                    <defs>
+                      <linearGradient id="a" x1="3" y1="7.00003" x2="22.2956" y2="12.0274" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" style="stop-color: var(--color-cyan-500)" />
+                        <stop offset="100%" style="stop-color: var(--color-purple-500)" />
+                      </linearGradient>
+                    </defs>
                   </svg>
                 </div>
-
-                <div class="flex items-center">
-                  <p
-                    class="text-3xl font-medium text-gray-900 sm:text-4xl font-pj"
-                  >
-                    +1M
-                  </p>
-                  <p class="ml-3 text-sm text-gray-900 font-pj">
-                    de pessoas<br />já consultaram
-                  </p>
-                </div>
               </div>
-            </div>
-
-            <div>
-              <img class="w-full" src="man-score.png" alt="" />
             </div>
           </div>
         </div>
       </section>
     </div>
-
-    <!-- O QUE É SCORE DE CRÉDITO -->
-
+    <!-- O QUE NÓS FAZEMOS -->
     <section class="py-10 bg-white sm:py-16 lg:py-24">
       <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div class="max-w-2xl mx-auto text-center">
-          <h2
-            class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl"
-          >
-            O que é score de crédito?
-          </h2>
-          
-        </div>
-
-        <div class="relative mt-10 mx-24 text-center">
-          <p>
-            O score é uma pontuação de 0 a 1.000 que avalia seu comportamento
-            financeiro. Ele funciona como uma nota escolar, avaliando sua
-            capacidade de pagamento de contas e compromissos financeiros.</p>
-            
-            <p class="my-6">É com base nessa pontuação que você será avaliado pelos bancos e
-            instituições quando for solicitar um cartão, crediário, empréstimo
-            ou financiamento. Quanto mais alto for o seu score, maiores serão
-            suas ,chances de aprovação.
-          </p>
-        </div>
-
-        <div class="relative mt-12 lg:mt-20">
-          <div
-            class="absolute inset-x-0 hidden xl:px-44 top-2 md:block md:px-20 lg:px-28"
-          >
-            <img
-              class="w-full"
-              src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/2/curved-dotted-line.svg"
-              alt=""
-            />
-          </div>
-
-          <div
-            class="relative grid grid-cols-1 text-center gap-y-12 md:grid-cols-3 gap-x-12"
-          >
-            <div>
-              <div
-                class="flex items-center justify-center"
-              >
-              <img src="https://assets.ycodeapp.com/assets/app19051/Images/G8WqNlmZB0AqjNzOtfq8MgTU6139yovcTPRFygAt-published.webp" width="150" />
-              </div>
-              <h3
-                class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10"
-              >
-              Suas chances de aprovação de crédito serão baixas
-              </h3>
-              <p class="mt-4 text-base text-gray-600">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-              </p>
+        <div class="grid items-center grid-cols-1 lg:grid-cols-2 gap-x-12 xl:gap-x-24 gap-y-12">
+          <div class="relative lg:mb-12">
+            <img class="absolute -right-0 -bottom-8 xl:-bottom-12 xl:-right-4" src="https://cdn.rareblocks.xyz/collection/celebration/images/content/3/dots-pattern.svg" alt="" />
+            <div class="pl-12 pr-6">
+              <img class="relative rounded-md" src="business-man-with-tablet.jpg" alt="" />
             </div>
-
-            <div>
-              <div
-                class="flex items-center justify-center"
-              >
-              <img src="https://assets.ycodeapp.com/assets/app19051/Images/7PGeRc4Ry3APqGXGiYcZIqsgFpvNvwLTriIR5rvp-published.webp" width="150" />
+            <div class="absolute left-0 pr-12 bottom-8 xl:bottom-20">
+              <div class="max-w-xs bg-neela-bank-800 rounded-lg sm:max-w-md xl:max-w-md">
+                <div class="px-3 py-4 sm:px-5 sm:py-8">
+                  <div class="flex items-start">
+                    <blockquote class="ml-5">
+                      <p class="text-sm font-medium text-white sm:text-lg"> Somos uma empresa de gestão patrominial que desenvolveu um modelo de gestão de patrimônio integrado. </p>
+                    </blockquote>
+                  </div>
+                </div>
               </div>
-              <h3
-                class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10"
-              >
-              Suas chances de aprovação de crédito serão médias
-              </h3>
-              <p class="mt-4 text-base text-gray-600">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-              </p>
-            </div>
-
-            <div>
-              <div
-                class="flex items-center justify-center"
-              >
-              <img src="https://assets.ycodeapp.com/assets/app19051/Images/IViGI5yyKjZVtkF4ShPNkREVK7AV8q093UBkFCOq-published.webp" width="150" />
-              </div>
-              <h3
-                class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10"
-              >
-              Você possui altas chances de aprovação de crédito
-              </h3>
-              <p class="mt-4 text-base text-gray-600">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-              </p>
             </div>
           </div>
+          <div class="2xl:pl-16">
+            <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight"> O que nós fazemos? </h2>
+            <p class="text-xl leading-relaxed text-gray-600 mt-9"> Adotamos uma abordagem centrada em um atendimento completo e personalizado, que une jurídico, contábil e banking. Nosso time trabalha em conjunto para cuidar e desenvolver o patrimônio do cliente, criando uma experiência de family office focado em fornecer dados e inteligência para as melhores tomadas de decisão. </p>
+            <p class="text-xl leading-relaxed text-gray-600 mt-9"> Sem contar o apoio de proteção de estrutura patrimonial, eficiência tributária, fiscal e sucessória, tudo isso organizando, estruturando e acompanhando de perto todas as necessidades de forma integrada. </p>
+            <p class="text-xl leading-relaxed text-gray-600 mt-9"> Oferecemos tranquilidade suficiente para que nossos clientes possam ser agressivos na construção do seu patrimônio! </p>
+          </div>
         </div>
-
-        <div class="relative mt-12 lg:mt-20 text-center">
-          <h2 class="text-2xl ">
-            Quer saber se o seu score é baixo, médio ou alto? Consulte gratuitamente agora!
-          </h2>
-        </div>
-
-        <div class="flex items-center justify-center mt-16">
-          <a
-            href="#"
-            title=""
-            class="px-6 py-3 text-lg font-bold leading-7 text-white transition-all duration-200 bg-rose-500 border border-transparent rounded-xl hover:bg-rose-400 font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-            role="button"
-          >
-            Consultar meu CPF
-          </a>
       </div>
     </section>
-
-    <!-- DEPOIMENTOS-->
-    <section class="py-12 bg-gray-50 sm:py-16 lg:py-20">
-      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div class="flex flex-col items-center">
-          <div class="text-center">
-            <p class="text-lg font-medium text-gray-600 font-pj">
-              2,157 people have said how good Rareblocks
+    <!-- APLICATIVO NEELA -->
+    <section class="overflow-hidden bg-gray-100">
+      <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-16 gap-y-12">
+          <div class="max-w-md pt-12 mx-auto text-center md:max-w-lg lg:max-w-none lg:mx-0 lg:text-left sm:pt-16 lg:py-40 md:self-center">
+            <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight"> Aplicativo Neela Bank </h2>
+            <p class="mt-4 text-base font-normal leading-7 text-gray-600 lg:text-lg lg:mt-6 lg:leading-8"> A experiência do cliente é projetada para ser <strong>ágil, simples e sem contratempos.</strong>
             </p>
-            <h2
-              class="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj"
-            >
-            Veja o que as pessoas dizem sobre a gente
-            </h2>
-          </div>
-
-          <div class="relative mt-10 md:mt-24 md:order-2">
-            <div
-              class="absolute -inset-x-1 inset-y-16 md:-inset-x-2 md:-inset-y-6"
-            >
-              <div
-                class="w-full h-full max-w-5xl mx-auto rounded-3xl opacity-30 blur-lg filter"
-                style="
-                  background: linear-gradient(
-                    90deg,
-                    #44ff9a -0.55%,
-                    #44b0ff 22.86%,
-                    #8b44ff 48.36%,
-                    #ff6644 73.33%,
-                    #ebff70 99.34%
-                  );
-                "
-              ></div>
+            <p class="mt-2 text-base font-normal leading-7 text-gray-600 lg:text-lg lg:leading-8"> Assumimos as tarefas mais complexas e monótonas, como o câmbio e a execução de ordens. </p>
+            <p class="mt-2 font-bold leading-7 text-gray-600 lg:text-lg lg:leading-8"> Todos os sistemas do Neela Bank são projetados para oferecer uma experência que faça o cliente se sentir seguro e valorizado. </p>
+            <div class="flex flex-col items-center mt-12 space-y-5 sm:space-y-0 sm:space-x-5 sm:flex-row sm:justify-center lg:justify-start sm:mt-16">
+              <a href="#" title="" class="transition-all duration-200 hover:-translate-y-1" target="_blank" rel="noopener">
+                <img class="object-cover w-auto h-16" src="https://landingfoliocom.imgix.net/store/collection/saasui/images/application/2/app-store.png" alt="" />
+              </a>
+              <a href="#" title="" class="transition-all duration-200 hover:-translate-y-1" target="_blank" rel="noopener">
+                <img class="object-cover w-auto h-16" src="https://landingfoliocom.imgix.net/store/collection/saasui/images/application/2/play-store.png" alt="" />
+              </a>
             </div>
-
-            <div
-              class="relative grid max-w-lg grid-cols-1 gap-6 mx-auto md:max-w-none lg:gap-10 md:grid-cols-3"
-            >
-              <div class="flex flex-col overflow-hidden shadow-xl">
-                <div
-                  class="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7"
-                >
-                  <div class="flex-1">
-                    <div class="flex items-center">
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                    </div>
-
-                    <blockquote class="flex-1 mt-8">
-                      <p class="text-lg leading-relaxed text-gray-900 font-pj">
-                        “You made it so simple. My new site is so much faster
-                        and easier to work with than my old site. I just choose
-                        the page, make the change.”
-                      </p>
-                    </blockquote>
-                  </div>
-
-                  <div class="flex items-center mt-8">
-                    <img
-                      class="flex-shrink-0 object-cover rounded-full w-11 h-11"
-                      src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png"
-                      alt=""
-                    />
-                    <div class="ml-4">
-                      <p class="text-base font-bold text-gray-900 font-pj">
-                        Leslie Alexander
-                      </p>
-                      <p class="mt-0.5 text-sm font-pj text-gray-600">
-                        Freelance React Developer
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex flex-col overflow-hidden shadow-xl">
-                <div
-                  class="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7"
-                >
-                  <div class="flex-1">
-                    <div class="flex items-center">
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                    </div>
-
-                    <blockquote class="flex-1 mt-8">
-                      <p class="text-lg leading-relaxed text-gray-900 font-pj">
-                        “Simply the best. Better than all the rest. I’d
-                        recommend this product to beginners and advanced users.”
-                      </p>
-                    </blockquote>
-                  </div>
-
-                  <div class="flex items-center mt-8">
-                    <img
-                      class="flex-shrink-0 object-cover rounded-full w-11 h-11"
-                      src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png"
-                      alt=""
-                    />
-                    <div class="ml-4">
-                      <p class="text-base font-bold text-gray-900 font-pj">
-                        Jacob Jones
-                      </p>
-                      <p class="mt-0.5 text-sm font-pj text-gray-600">
-                        Digital Marketer
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex flex-col overflow-hidden shadow-xl">
-                <div
-                  class="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7"
-                >
-                  <div class="flex-1">
-                    <div class="flex items-center">
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                      <svg
-                        class="w-5 h-5 text-[#FDB241]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                        />
-                      </svg>
-                    </div>
-
-                    <blockquote class="flex-1 mt-8">
-                      <p class="text-lg leading-relaxed text-gray-900 font-pj">
-                        “I cannot believe that I have got a brand new landing
-                        page after getting Omega. It was super easy to edit and
-                        publish.”
-                      </p>
-                    </blockquote>
-                  </div>
-
-                  <div class="flex items-center mt-8">
-                    <img
-                      class="flex-shrink-0 object-cover rounded-full w-11 h-11"
-                      src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png"
-                      alt=""
-                    />
-                    <div class="ml-4">
-                      <p class="text-base font-bold text-gray-900 font-pj">
-                        Jenny Wilson
-                      </p>
-                      <p class="mt-0.5 text-sm font-pj text-gray-600">
-                        Graphic Designer
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          </div>
+          <div class="-mb-72 md:self-end md:-mb-64 lg:-mb-48 xl:-mb-64">
+            <img class="w-full max-w-md mx-auto" src="mobile.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONECTANDO VOCÊ AO MERCADO GLOBAL -->
+    <section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
+      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight"> Conectando você ao mercado global </h2>
+        </div>
+        <div class="grid grid-cols-1 mt-12 lg:mt-24 gap-y-12 md:grid-cols-3 gap-x-6">
+          <div class="md:px-4 lg:px-10">
+            <img class="rounded-md" src="handshake.jpg" alt="" />
+            <h3 class="mt-8 text-xl font-semibold leading-tight text-black"> Foco no cliente brasileiro </h3>
+            <p class="mt-4 text-base text-gray-600"> Entendemos profundamente as necessidades dos investidores brasileiros, adaptando nossos serviços para oferecer uma experiência personalizada e relevante. </p>
+          </div>
+          <div class="md:px-4 lg:px-10">
+            <img class="rounded-md" src="chart.jpg" alt="" />
+            <h3 class="mt-8 text-xl font-semibold leading-tight text-black"> Acesso a investimentos sofisticados e exclusivos </h3>
+            <p class="mt-4 text-base text-gray-600"> Proporcionamos aos nossos clientes oportunidades de investimento que normalmente estariam fora do alcance, incluindo produtos e serviços sofisticados. </p>
+          </div>
+          <div class="md:px-4 lg:px-10">
+            <img class="-rotate-1 rounded-md" src="global.jpg" alt="" />
+            <h3 class="mt-8 text-xl font-semibold leading-tight text-black"> Acesso expandido ao mercado financeiro global </h3>
+            <p class="mt-4 text-base text-gray-600"> Facilitamos a entrada em mercados internacionais, ampliando significativamente as opções de diversificação de portfólio dos nossos clientes. </p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 mt-12 lg:mt-24 gap-y-12 md:grid-cols-3 gap-x-6">
+          <div class="md:px-4 lg:px-10">
+            <img class="rounded-t-md" src="market.png" alt="" />
+            <h3 class="mt-8 text-xl font-semibold leading-tight text-black"> Experiência de investimento intuitiva </h3>
+            <p class="mt-4 text-base text-gray-600"> Entendemos profundamente as necessidades dos investidores brasileiros, adaptando nossos serviços para oferecer uma experiência personalizada e relevante. </p>
+          </div>
+          <div class="md:px-4 lg:px-10">
+            <img class="rounded-md" src="calculator.png" alt="" />
+            <h3 class="mt-8 text-xl font-semibold leading-tight text-black"> Otimização tributária </h3>
+            <p class="mt-4 text-base text-gray-600"> Proporcionamos aos nossos clientes oportunidades de investimento que normalmente estariam fora do alcance, incluindo produtos e serviços sofisticados. </p>
+          </div>
+          <div class="md:px-4 lg:px-10">
+            <img class="rounded-md" src="family.png" alt="" />
+            <h3 class="mt-8 text-xl font-semibold leading-tight text-black"> Soluções de proteção patrominial </h3>
+            <p class="mt-4 text-base text-gray-600"> Facilitamos a entrada em mercados internacionais, ampliando significativamente as opções de diversificação de portfólio dos nossos clientes. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PRODUTOS INOVADORES DO NEELA BANK -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-neela-bank-950">
+      <div class="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-y-12 lg:gap-x-20">
+          <div class="lg:col-span-3">
+            <h2 class="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl lg:leading-tight"> Produtos inovadores <br />do Neela Bank </h2>
+            <h2 class="text-2xl mt-3 text-white/50">Expandindo suas oportunidades de investimento </span>
+          </div>
+          <div class="lg:col-span-2">
+            <p class="font-sans text-lg font-normal leading-8 text-opacity-70 text-white"> Nosso portfólio de produtos é cuidadosamente projetado para oferecer flexibilidade, segurança e oportunidades de crescimento. </p>
+            <p class="font-sans text-lg font-normal leading-8 mt-3 text-opacity-70 text-white"> Conheça as soluções que fazem do Neela Bank o seu parceiro ideal para investimentos em dólares: </p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 gap-5 mt-12 lg:mt-16 lg:grid-cols-3">
+          <div class="overflow-hidden rounded-lg bg-dark-gray">
+            <div class="px-4 py-5 sm:p-6 lg:p-8">
+              <svg class="text-white h-11 w-11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+              </svg>
+              <h3 class="mt-3 font-sans text-2xl font-normal text-white"> Neela Savings </h3>
+              <p class="mt-4 text-base font-normal text-opacity-50 text-white"> Non pretium mi, sagittis placerat. Elit risus malesuada ornare orci in. Tellus, tempor eget vitae aliquet suspendisse sed purus velit elit. </p>
+            </div>
+          </div>
+          <div class="overflow-hidden rounded-lg bg-dark-gray">
+            <div class="px-4 py-5 sm:p-6 lg:p-8">
+              <svg class="text-white h-11 w-11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+              </svg>
+              <h3 class="mt-3 font-sans text-2xl font-normal text-white"> Notas estruturadas estratégicas </h3>
+              <p class="mt-4 text-base font-normal text-opacity-50 text-white"> Non pretium mi, sagittis placerat. Elit risus malesuada ornare orci in. Tellus, tempor eget vitae aliquet suspendisse sed purus velit elit. </p>
+            </div>
+          </div>
+          <div class="overflow-hidden rounded-lg bg-dark-gray">
+            <div class="px-4 py-5 sm:p-6 lg:p-8">
+              <svg class="text-white h-11 w-11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+              </svg>
+              <h3 class="mt-3 font-sans text-2xl font-normal text-white"> Conta patrominial </h3>
+              <p class="mt-4 text-base font-normal text-opacity-50 text-white"> Non pretium mi, sagittis placerat. Elit risus malesuada ornare orci in. Tellus, tempor eget vitae aliquet suspendisse sed purus velit elit. </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- FAQ -->
-
-    <section class="py-12 bg-gray-50 sm:py-16 lg:py-20">
+    <!-- UM CONVITE PARA O FUTURO -->
+    <section class="py-10 bg-gray-100 sm:py-16 lg:py-24">
       <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div class="text-center">
-              <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">Perguntas mais frequentes</h2>
+        <div class="max-w-5xl mx-auto text-center">
+          <div class="inline-flex px-4 py-1.5 mx-auto rounded-full bg-neela-bank-900">
+            <p class="text-xs font-semibold tracking-widest text-white uppercase">Neela Bank</p>
           </div>
-  
-          <div class="max-w-5xl mx-auto mt-10 sm:mt-20">
-              <div class="flow-root">
-                  <div class="-my-8 divide-y divide-gray-200">
-                      <div class="py-8">
-                          <p class="text-2xl font-bold text-gray-900 font-pj">01. How this UI Kit is different from others in market?</p>
-                          <p class="mt-8 text-lg font-normal text-gray-600 font-pj">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                      </div>
-  
-                      <div class="py-8">
-                          <p class="text-2xl font-bold text-gray-900 font-pj">02. Do I need any experience to work with Rareblocks?</p>
-                          <p class="mt-8 text-lg font-normal text-gray-600 font-pj">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor convallis suspendisse eget risus, praesent nullam amet sed. Auctor sed viverra purus ullamcorper. Fermentum ante fames velit massa cras id donec metus, aliquam. Nibh odio volutpat in etiam.
-                          </p>
-                      </div>
-  
-                      <div class="py-8">
-                          <p class="text-2xl font-bold text-gray-900 font-pj">03. Do you provide any support for this kit?</p>
-                          <p class="mt-8 text-lg font-normal text-gray-600 font-pj">
-                              Consectetur adipiscing elit. Nisi tincidunt mauris faucibus netus. Quis quis et metus, integer adipiscing. Nulla egestas elit ultricies nunc enim orci pellentesque. Semper risus vel nisl a, tortor egestas vulputate justo, magna. Diam ut eget ut pharetra donec in duis
-                              pellentesque dignissim.
-                          </p>
-                      </div>
-  
-                      <div class="py-8">
-                          <p class="text-2xl font-bold text-gray-900 font-pj">04. Will I get money back if I am not satisfied?</p>
-                          <p class="mt-8 text-lg font-normal text-gray-600 font-pj">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                      </div>
-                  </div>
-              </div>
+          <h2 class="text-3xl mt-5 font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">Um convite para o futuro</h2>
+          <p class="mt-6 text-lg leading-relaxed text-gray-600">O Neela Bank não é apenas uma instituição financeira; é um movimento em direção a um futuro onde cada brasileiro tem o poder de alcançar a excelência financeira. Estamos convidando você, um especialista em finanças, a se unir a esta jornada transformadora.</p>
+          <p class="mt-4 text-lg leading-relaxed text-gray-600">Como consultor do Neela Bank você terá oportunidade de:</p>
+        </div>
+        <div class="grid grid-cols-1 gap-5 mt-12 sm:grid-cols-3 lg:mt-20 lg:gap-x-12">
+          <div class="transition-all duration-200 bg-white hover:shadow-xl">
+            <div class="py-10 px-9">
+              <svg class="h-16" fill="#9ca3af" viewBox="0 0 512 512">
+                <path d="M269.4 2.9C265.2 1 260.7 0 256 0s-9.2 1-13.4 2.9L54.3 82.8c-22 9.3-38.4 31-38.3 57.2c.5 99.2 41.3 280.7 213.6 363.2c16.7 8 36.1 8 52.8 0C454.7 420.7 495.5 239.2 496 140c.1-26.2-16.3-47.9-38.3-57.2L269.4 2.9zM144 221.3c0-33.8 27.4-61.3 61.3-61.3c16.2 0 31.8 6.5 43.3 17.9l7.4 7.4 7.4-7.4c11.5-11.5 27.1-17.9 43.3-17.9c33.8 0 61.3 27.4 61.3 61.3c0 16.2-6.5 31.8-17.9 43.3l-82.7 82.7c-6.2 6.2-16.4 6.2-22.6 0l-82.7-82.7c-11.5-11.5-17.9-27.1-17.9-43.3z" />
+              </svg>
+              <h3 class="mt-8 text-lg font-semibold text-black">Inspirar confiança</h3>
+              <p class="mt-4 text-base text-gray-600">Seja o catalisador que inspira os clientes a tomarem decisões financeiras prudentes e poderosas.</p>
+            </div>
           </div>
+          <div class="transition-all duration-200 bg-white hover:shadow-xl">
+            <div class="py-10 px-9">
+              <svg class="h-16" fill="#9ca3af" viewBox="0 0 576 512">
+                <path d="M96 14.5C96 6.5 102.5 0 110.5 0L160 0c88.4 0 160 71.6 160 160l0 96c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-96-14.5 0C161.1 160 96 94.9 96 14.5zm384 0C480 89 424.1 150.3 352 159c-.2-44.9-15.9-86.2-42-118.8C338.2 15.2 375.3 0 416 0l49.5 0c8 0 14.5 6.5 14.5 14.5zm88.2 321.7c13.1 17.8 9.3 42.8-8.5 55.9L433.1 485.5c-23.4 17.2-51.6 26.5-80.7 26.5L192 512 32 512c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l36.8 0 44.9-36c22.7-18.2 50.9-28 80-28l78.3 0 16 0 64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0-16 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l120.6 0 119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5zM193.6 384c0 0 0 0 0 0l-.9 0c.3 0 .6 0 .9 0z" />
+              </svg>
+              <h3 class="mt-8 text-lg font-semibold text-black">Criar legados</h3>
+              <p class="mt-4 text-base text-gray-600">Ajude a construir futuros financeiros sólidos, criando legados que perdurarão por gerações.</p>
+            </div>
+          </div>
+          <div class="transition-all duration-200 bg-white hover:shadow-xl">
+            <div class="py-10 px-9">
+              <svg class="h-16" fill="#9ca3af" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                <path d="M0 64C0 28.7 28.7 0 64 0L512 0c35.3 0 64 28.7 64 64l0 147.2c-19.5-10-41.1-16.4-64-18.5L512 64 64 64l0 288 256.7 0c-.5 5.3-.7 10.6-.7 16c0 59.5 29.5 112.1 74.8 144L160 512c-17.7 0-32-14.3-32-32s14.3-32 32-32l69.3 0L240 416 64 416c-35.3 0-64-28.7-64-64L0 64zm480 56l0 72.7c-16.7 1.5-32.7 5.3-47.7 11.2c-.2-1.3-.3-2.6-.3-3.9l0-22.1L321 289c-4.5 4.5-10.6 7-17 7s-12.5-2.5-17-7l-63-63-87 87c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9L207 175c9.4-9.4 24.6-9.4 33.9 0l63 63L398.1 144 376 144c-13.3 0-24-10.7-24-24s10.7-24 24-24l80 0c13.3 0 24 10.7 24 24zM352 368a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm120.8-32.6c.6-.9 1.8-2.1 4.2-3.4c5.1-2.7 12.5-4.1 18.7-4c8.2 .1 17.1 1.8 26.4 4.1c8.6 2.1 17.3-3.1 19.4-11.7s-3.1-17.3-11.7-19.4c-5.6-1.4-11.6-2.7-17.9-3.7l0-9.4c0-8.8-7.2-16-16-16s-16 7.2-16 16l0 9.5c-6.1 1.2-12.3 3.2-18 6.3c-11.8 6.3-23 18.4-21.8 37.2c1 16 11.7 25.3 21.6 30.7c8.8 4.7 19.7 7.8 28.6 10.3l1.8 .5c10.3 2.9 17.9 5.2 23.2 8.3c4.5 2.7 4.7 4.2 4.7 5.6c.1 2.4-.5 3.7-1 4.5c-.6 1-1.8 2.2-4 3.3c-4.7 2.5-11.8 3.8-18.5 3.6c-9.5-.3-18.5-3.1-29.9-6.8c-1.9-.6-3.8-1.2-5.8-1.8c-8.4-2.6-17.4 2.1-20 10.5s2.1 17.4 10.5 20c1.6 .5 3.3 1 5 1.6c0 0 0 0 0 0s0 0 0 0c7 2.3 15.1 4.8 23.7 6.6l0 11.4c0 8.8 7.2 16 16 16s16-7.2 16-16l0-10.8c6.2-1.1 12.5-3.1 18.3-6.2c12.1-6.5 22.3-18.7 21.7-36.9c-.5-16.2-10.3-26.3-20.5-32.3c-9.4-5.6-21.2-8.9-30.5-11.5l-.2 0c-10.4-2.9-18.3-5.2-23.9-8.2c-4.8-2.6-4.8-4-4.8-4.5c0 0 0 0 0-.1c-.1-1.9 .3-2.9 .8-3.6z" />
+              </svg>
+              <h3 class="mt-8 text-lg font-semibold text-black">Transformar vidas</h3>
+              <p class="mt-4 text-base text-gray-600">Seja parte de histórias de sucesso que transformam a vida dos clientes, proporcionando liberdade e segurança financeira.</p>
+            </div>
+          </div>
+        </div>
       </div>
-  </section>
-  
+    </section>
+    <!-- VOCÊ ESTÁ PRONTO? -->
+    <section class="py-12 bg-neela-bank-950 sm:py-16 lg:py-20 xl:py-24">
+      <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="grid grid-cols-1 gap-y-12 lg:grid-cols-7 lg:gap-x-20">
+          <div class="lg:col-span-3 lg:order-last">
+            <div class="relative overflow-hidden">
+              <img class="object-cover w-full h-full rounded-md" src="https://landingfoliocom.imgix.net/store/collection/dusk/images/features/11/woman.png" alt="" />
+            </div>
+          </div>
+          <div class="lg:col-span-4">
+            <h2 class="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl lg:leading-tight">Você está pronto?</h2>
+            <p class="mt-8 text-lg font-normal text-white/70"> Junte-se a nós no Neela Bank e seja parte dessa mudança. Comece desbravar o caminho para um futuro financeiro brilhante - para você e para seus clientes. Vamos juntos! </p>
+            <p class="mt-8 text-xl font-normal text-white">Seus próximos passos: <span class="text-transparent bg-clip-text bg-gradient-to-r from-neela-bank-00 to-neela-bank-800">rumo a uma carreira brilhante!</span>
+            </p>
+            <ul class="grid grid-cols-1 mt-8 sm:grid-cols-2 sm:mt-12 gap-x-12 gap-y-8 sm:gap-y-12">
+              <li class="flex items-start">
+                <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 13L9 17L19 7" stroke="url(#paint0_linear_515_2603)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <defs>
+                    <linearGradient id="paint0_linear_515_2603" x1="5" y1="7" x2="20.3943" y2="10.1196" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#6DDCFF" />
+                      <stop offset="1" stop-color="#7F60F9" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <span class="ml-4 text-lg font-normal text-white/70">
+                  <strong class="text-white">Capacitação:</strong> Complete nosso programa de treinamento para conhecer profundamente nossos produtos e filosofia. </span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 13L9 17L19 7" stroke="url(#paint0_linear_515_2603)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <defs>
+                    <linearGradient id="paint0_linear_515_2603" x1="5" y1="7" x2="20.3943" y2="10.1196" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#6DDCFF" />
+                      <stop offset="1" stop-color="#7F60F9" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <span class="ml-4 text-lg font-normal text-white/70">
+                  <strong class="text-white">Kit de ferramentas:</strong> Acesse seu kit de marketing digital, repleto de recursos para ajudá-lo a se conectar com clientes potenciais. </span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 13L9 17L19 7" stroke="url(#paint0_linear_515_2603)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <defs>
+                    <linearGradient id="paint0_linear_515_2603" x1="5" y1="7" x2="20.3943" y2="10.1196" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#6DDCFF" />
+                      <stop offset="1" stop-color="#7F60F9" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <span class="ml-4 text-lg font-normal text-white/70">
+                  <strong class="text-white">Networking:</strong> Participe de eventos exclusivos do Neela Bank para expandir sua rede e compartilhar melhores práticas. </span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 13L9 17L19 7" stroke="url(#paint0_linear_515_2603)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <defs>
+                    <linearGradient id="paint0_linear_515_2603" x1="5" y1="7" x2="20.3943" y2="10.1196" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#6DDCFF" />
+                      <stop offset="1" stop-color="#7F60F9" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <span class="ml-4 text-lg font-normal text-white/70">
+                  <strong class="text-white">Atendimento dedicado:</strong> Conte com nosso suporte dedicado para consultores, pronto para ajudá-lo a superar qualquer desafio. </span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 13L9 17L19 7" stroke="url(#paint0_linear_515_2603)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <defs>
+                    <linearGradient id="paint0_linear_515_2603" x1="5" y1="7" x2="20.3943" y2="10.1196" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#6DDCFF" />
+                      <stop offset="1" stop-color="#7F60F9" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <span class="ml-4 text-lg font-normal text-white/70">
+                  <strong class="text-white">Comece a vender:</strong> Com seu conhecimento e nossos recursos, comece a fazer parte da história de sucesso financeiro dos seus clientes. Solicite seu código de consultor. </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ -->
+    <section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
+      <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">Perguntas mais frequentes</h2>
+        </div>
+        <div class="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16">
+       
 
+
+          <div class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50" x-data="{ open: false }">
+            <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6" @click="open = !open">
+              <span class="flex text-lg font-semibold text-black"> Quais são as vantagens de possuir um token da SV Standard?</span>
+              <svg :class="{ 'rotate-180': open }" class="w-6 h-6 text-gray-400 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div x-show="open" x-collapse>
+              <div class="px-4 pb-5 sm:px-6 sm:pb-6">
+                <p>Possuir um Token da SV Standard oferece várias vantagens atraentes para investidores que buscam proteção robusta de ativos e privacidade...</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50" x-data="{ open: false }">
+            <button type="button" class="flex text-left items-center justify-between w-full px-4 py-5 sm:p-6" @click="open = !open">
+              <span class="flex text-lg font-semibold text-black">Como investir através de um token difere do investimento individual tradicional em termos de implicações fiscais e gestão de ativos?</span>
+              <svg :class="{ 'rotate-180': open }" class="w-6 h-6 text-gray-400 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div x-show="open" x-collapse>
+              <div class="px-4 pb-5 sm:px-6 sm:pb-6">
+                <p>A principal distinção entre investir através de um Token e como indivíduo reside no tratamento fiscal e na gestão de ativos. Investidores individuais no Brasil estão sujeitos à tributação global, exigindo que relatem e paguem impostos sobre a renda mundial, potencialmente levando a uma carga tributária pesada. Em contraste, investir através de um Token oferece um regime fiscal simplificado, com um imposto de 15% sobre ganhos de capital aplicado apenas na alienação ou resgate do token, calculado sobre a diferença entre os valores de aquisição e venda, possibilitando obrigações fiscais mais previsíveis e gerenciáveis.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50" x-data="{ open: false }">
+            <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6" @click="open = !open">
+              <span class="flex text-lg font-semibold text-black">Qual é a diferença entre o token SV Standard e a tokenização regular?</span>
+              <svg :class="{ 'rotate-180': open }" class="w-6 h-6 text-gray-400 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div x-show="open" x-collapse>
+              <div class="px-4 pb-5 sm:px-6 sm:pb-6">
+                <p>Enquanto um token regular indexa o preço de um ativo, operando como um Contrato por Diferença (CFD), o Token SV Standard confere propriedade direta do ativo. O Token SV Standard é o instrumento de propriedade, equivalente a uma escritura.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50" x-data="{ open: false }">
+            <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6" @click="open = !open">
+              <span class="flex text-lg font-semibold text-black">É legal investir em ativos digitais no Brasil?</span>
+              <svg :class="{ 'rotate-180': open }" class="w-6 h-6 text-gray-400 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div x-show="open" x-collapse>
+              <div class="px-4 pb-5 sm:px-6 sm:pb-6">
+                <p>Sim, é permitido investir em ativos digitais no Brasil. A Lei no 14.478/22 estabeleceu o marco legal para criptoativos, regulando as atividades relacionadas e definindo medidas para a proteção do investidor e prevenção à lavagem de dinheiro.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50" x-data="{ open: false }">
+            <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6" @click="open = !open">
+              <span class="flex text-lg font-semibold text-black">Quem são os reguladores por trás do token?</span>
+              <svg :class="{ 'rotate-180': open }" class="w-6 h-6 text-gray-400 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div x-show="open" x-collapse>
+              <div class="px-4 pb-5 sm:px-6 sm:pb-6">
+                <p>Similar ao Bitcoin, o Token opera com base em um acordo privado entre você e o software (contrato inteligente) e não depende de nenhuma jurisdição específica para existir. No entanto, para que o Token seja reconhecido como um acordo privado legal em jurisdições onde faz negócios, como os EUA, ele deve aderir às regulamentações KYC/AML/CFT.</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50" x-data="{ open: false }">
+            <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6" @click="open = !open">
+              <span class="flex text-lg font-semibold text-black">E sobre a SV Standard?</span>
+              <svg :class="{ 'rotate-180': open }" class="w-6 h-6 text-gray-400 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div x-show="open" x-collapse>
+              <div class="px-4 pb-5 sm:px-6 sm:pb-6">
+                <p>O Grupo SV Standard opera através de entidades reguladas em várias jurisdições, mas nossos serviços principais são fornecidos através das Bahamas, dos EUA e do Brasil. O acordo entre a SV e você engloba licenciamento de software, KYC/AML/CFT, depósito de ativos, consultoria e suporte técnico para que você possa alcançar o máximo potencial do seu token.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50" x-data="{ open: false }">
+            <button type="button" class="flex items-center justify-between w-full px-4 py-5 sm:p-6" @click="open = !open">
+              <span class="flex text-lg font-semibold text-black">Como o token opera em relação às novas leis fiscais no Brasil?</span>
+              <svg :class="{ 'rotate-180': open }" class="w-6 h-6 text-gray-400 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div x-show="open" x-collapse>
+              <div class="px-4 pb-5 sm:px-6 sm:pb-6">
+                <p>De acordo com a IN RFB 2180/2024, seu Token é classificado como ativos virtuais sujeitos às regras de tributação de aplicações financeiras no exterior detidas por indivíduos residentes no Brasil, nos termos do Capítulo III da nova Instrução Normativa. Assim, os lucros e ganhos obtidos com os Tokens serão sujeitos a um imposto de 15% sobre ganhos de capital na alienação/resgate de tokens, calculado sobre a diferença entre o valor obtido na venda e o custo de aquisição.</p>
+              </div>
+            </div>
+          </div>
+
+
+       
+        </div>
+      </div>
+    </section>
     <!-- FOOTER -->
-
-    <footer
-      style="margin-left: 4px; margin-right: 4px"
-      class="py-12 bg-gray-50 sm:pt-12 lg:pt-12"
-    >
-      <div class="">
-        <div class="flex justify-center">
+    <footer class="py-12 bg-neela-bank-950 sm:pt-16 lg:pt-20">
+      <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="flex flex-col items-center space-y-10 lg:justify-between lg:space-y-0 lg:flex-row">
           <div class="shrink-0">
             <a href="#" title="" class="flex">
-              <img class="w-auto h-12" src="./favicon.png" alt="" />
+              <img class="w-auto h-8" src="logo.png" alt="" />
             </a>
           </div>
+          <nav class="flex items-center justify-center space-x-6 sm:space-x-16 xl:space-x-20">
+            <a href="#" title="" class="text-base font-medium text-gray-100 transition-all duration-200 hover:-translate-y-1 hover:text-white"> Sobre nós </a>
+            <a href="#" title="" class="text-base font-medium text-gray-100 transition-all duration-200 hover:-translate-y-1 hover:text-white"> Serviços </a>
+            <a href="#" title="" class="text-base font-medium text-gray-100 transition-all duration-200 hover:-translate-y-1 hover:text-white"> Neela Bank </a>
+            <a href="#" title="" class="text-base font-medium text-gray-100 transition-all duration-200 hover:-translate-y-1 hover:text-white"> Carreiras </a>
+            <a href="#" title="" class="text-base font-medium text-gray-100 transition-all duration-200 hover:-translate-y-1 hover:text-white"> Contato </a>
+          </nav>
+          <ul class="flex items-center justify-end space-x-3">
+            <li>
+              <a href="#" title="" class="inline-flex items-center justify-center w-8 h-8 text-white transition-all duration-200 bg-neela-bank-800 rounded-full hover:bg-neela-bank-600" target="_blank" rel="noopener">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                  <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="" class="inline-flex items-center justify-center w-8 h-8 text-white transition-all duration-200 bg-neela-bank-800 rounded-full hover:bg-neela-bank-600" target="_blank" rel="noopener">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path>
+                  <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                  <path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
-      </div>
-
-      <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-        <div class="pt-6 mt-6 text-center border-t border-gray-300">
-          <p class="text-sm font-normal text-black">
-            2024 © Consulta Meu CPF. Todos os direitos reservados.
-          </p>
+        <div class="pt-12 mt-12 text-center border-t border-gray-700 sm:mt-16 lg:mt-20">
+          <p class="text-sm font-normal text-gray-300">© Copyright 2024. Todos os direitos reservados a Neela Bank.</p>
         </div>
       </div>
     </footer>
-
     <script type="module" src="/main.js"></script>
   </body>
 </html>
