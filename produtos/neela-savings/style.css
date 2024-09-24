@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.accordion-item {
+  width: 15%; /* A largura das abas foi ajustada para garantir que todo o espaço seja ocupado */
+  transition: width 0.5s ease;
+}
+.accordion-item.active {
+  width: 10%; /* A aba ativa tem uma largura maior */
+}
+.content-area {
+  width: 30%; /* A largura do conteúdo entre as abas foi ajustada */
+  transition: width 0.5s ease;
+}
+
+@media (max-width: 768px) {
+  .accordion-item,
+  .accordion-item.active,
+  .content-area {
+    width: 100%; /* Em telas menores, as abas ocupam toda a largura */
+  }
+
+  .content-area {
+    height: 16rem;
+  }
+}
