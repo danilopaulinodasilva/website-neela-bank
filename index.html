@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Neela</title>
+    <title>Neela Bank</title>
   </head>
   <body class="pb-24 sm:pb-0">
 
     <div class="fixed sm:hidden bottom-0 w-full z-50 flex justify-center bg-white py-5 shadow">
       <a
-                          href="#apps"
+                          href="/aprovacao/neela-bank/#apps"
                           title=""
                           class="block sm:hidden w-full mx-5 inline-flex items-center justify-center px-6 py-2.5 text-lg font-medium bg-neela-bank-900 text-white transition-all duration-200 border border-neela-bank-700 rounded-full hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
                           role="button"
@@ -20,37 +20,92 @@
     </div>
 
     <div>
-      <header class="py-4 bg-neela-bank-900 sm:py-5" x-data="{expanded: false}">
-          <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-              <div class="flex items-center justify-between">
-                  <div class="shrink-0">
-                      <a href="#" title="" class="">
-                          <img class="w-auto h-10" src="logo_dark.png" alt="Logo Neela Bank" />
-                      </a>
-                  </div>
+      <header class="py-4 sm:py-5 bg-neela-bank-900">
+        <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+          <div class="flex items-center justify-between">
+            <div class="shrink-0">
+              <a href="/aprovacao/neela-bank/" title="" class="">
+                <img
+                  class="w-auto h-10"
+                  src="logo_dark.png"
+                  alt="Logo Neela Bank"
+                />
+              </a>
+            </div>
   
-                  <div class="hidden lg:flex lg:items-center lg:space-x-12 lg:ml-12">
-                    <a href="#" title="" class="text-base font-medium text-white transition-all duration-200 hover:-translate-y-1 hover:text-white/50"> Sobre nós </a>
-                    <a href="#" title="" class="text-base font-medium text-white transition-all duration-200 hover:-translate-y-1 hover:text-white/50"> Produtos </a>
-                    <a href="#" title="" class="text-base font-medium text-white transition-all duration-200 hover:-translate-y-1 hover:text-white/50"> Carreiras </a>
-                    <a href="#" title="" class="text-base font-medium text-white transition-all duration-200 hover:-translate-y-1 hover:text-white/50"> FAQ </a>
-
-                  </div>
+            <div class="hidden lg:flex lg:items-center lg:space-x-12 lg:ml-12">
+              <a
+                href="/aprovacao/neela-bank/#sobre"
+                title=""
+                class="text-base font-medium text-white transition-all duration-200 hover:-translate-y-1 hover:text-white/50"
+              >
+                Sobre nós
+              </a>
   
-                  <div class="hidden sm:flex sm:items-center sm:justify-end sm:space-x-4 sm:ml-auto">
-                      <a
-                          href="#apps"
-                          title=""
-                          class="inline-flex items-center justify-center px-6 py-2.5 text-base font-medium bg-white text-neela-bank-900 transition-all duration-200 border border-neela-bank-900 rounded-full hover:bg-white/75 hover:text-neela-bank-900/50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
-                          role="button"
-                      >
-                          Abra sua conta
-                      </a>
-                  </div>
+              <div class="relative inline-block group">
+                <a
+                  href="/aprovacao/neela-bank/#produtos"
+                  title=""
+                  class="text-base font-medium text-white p-4 transition-all duration-200 hover:-translate-y-1 hover:text-white/50"
+                >
+                  Produtos
+                </a>
   
-               
+                <div
+                  class="absolute left-0 hidden mt-2 group-hover:block w-48 bg-white text-neela-bank-900 rounded-lg shadow-lg transition-all duration-200"
+                  style="top: 100%"
+                >
+                  <a
+                    href="/aprovacao/neela-bank/produtos/neela-savings"
+                    class="block px-4 py-2 text-base text-left hover:bg-neela-bank-100 transition-all duration-200 rounded-lg"
+                  >
+                    Neela Savings
+                  </a>
+                  <a
+                    href="/aprovacao/neela-bank/produtos/conta-patrimonial"
+                    class="block px-4 py-2 text-base text-left hover:bg-neela-bank-100 transition-all duration-200 rounded-lg"
+                  >
+                    Conta Patrimonial
+                  </a>
+                  <a
+                    href="/aprovacao/neela-bank/produtos/notas-estruturadas"
+                    class="block px-4 py-2 text-base text-left hover:bg-neela-bank-100 transition-all duration-200 rounded-lg"
+                  >
+                    Notas Estruturadas
+                  </a>
+                </div>
               </div>
+  
+              <a
+                href="/aprovacao/neela-bank/carreiras/"
+                title=""
+                class="text-base font-medium text-white transition-all duration-200 hover:-translate-y-1 hover:text-white/50"
+              >
+                Carreiras
+              </a>
+              <a
+                href="/aprovacao/neela-bank/#faq"
+                title=""
+                class="text-base font-medium text-white transition-all duration-200 hover:-translate-y-1 hover:text-white/50"
+              >
+                FAQ
+              </a>
+            </div>
+  
+            <div
+              class="hidden sm:flex sm:items-center sm:justify-end sm:space-x-4 sm:ml-auto"
+            >
+              <a
+                href="/aprovacao/neela-bank/#apps"
+                title=""
+                class="inline-flex items-center justify-center px-6 py-2.5 text-base font-medium bg-white text-neela-bank-900 transition-all duration-200 border border-neela-bank-900 rounded-full hover:bg-white/75 hover:text-neela-bank-900/50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
+                role="button"
+              >
+                Abra sua conta
+              </a>
+            </div>
           </div>
+        </div>
       </header>
   
       <section class="py-12 overflow-hidden bg-white sm:py-16 lg:pb-20 xl:pb-48">
@@ -67,7 +122,7 @@
 
                       <div class="mt-8">
                           <a
-                              href="#"
+                              href="/aprovacao/neela-bank/produtos/neela-savings/"
                               title=""
                               class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white transition-all duration-200 bg-neela-bank-900 border border-transparent rounded-full hover:bg-neela-bank-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neela-bank-500"
                               role="button"
@@ -92,8 +147,8 @@
       </section>
     </div>
 
-    <!-- O QUE NÓS FAZEMOS -->
-    <section class="py-10 bg-neela-bank-50 sm:py-16 lg:py-24">
+    <!-- SOBRE -->
+    <section id="sobre" class="py-10 bg-neela-bank-50 sm:py-16 lg:py-24">
       <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="grid items-center grid-cols-1 lg:grid-cols-2 gap-x-12 xl:gap-x-24 gap-y-12">
           <div class="relative lg:mb-12">
@@ -115,14 +170,16 @@
           </div>
           <div class="2xl:pl-16">
             <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight"> Um diferencial competitivo </h2>
-            <p class="text-lg text-justify leading-relaxed text-gray-600 mt-9">Em um cenário de constante evolução tecnológica, o Neela Bank se posiciona como um parceiro estratégico, comprometido em simplificar e democratizar o acesso dos brasileiros ao investimento offshore. Nossa missão é transformar a experiência bancária e de investimentos internacionais, oferecendo uma estrutura offshore que proporciona não apenas praticidade, mas também uma série de benefícios estratégicos.</p>
-            
-            <p class="text-lg text-justify leading-relaxed text-gray-600 mt-9">Com soluções descomplicadas, eficientes e transparentes, projetamos nossos serviços para atender às necessidades mais variadas, permitindo que nossos clientes explorem oportunidades globais de investimento com vantagens sucessórias, fiscais e de proteção patrimonial. Nossa estrutura offshore facilita a preservação de bens e a otimização tributária, garantindo maior segurança e flexibilidade na gestão de patrimônio, tanto para o presente quanto para as futuras gerações.</p>
+            <p class="text-lg text-justify leading-relaxed text-gray-600 mt-9">O Neela Bank é o seu passaporte para investir no exterior com uma estrutura patrimonial completa. Proteja seu patrimônio, maximize sua eficiência tributária e garanta a segurança sucessória para você e o futuro da sua família.</p>
+
+              <p class="text-lg text-justify leading-relaxed text-gray-600 mt-9">Em um mundo de constante inovação tecnológica, o Neela Bank se destaca como um parceiro estratégico para simplificar e democratizar o acesso dos brasileiros ao investimento offshore. Nossa missão é revolucionar a experiência bancária e de investimentos internacionais, oferecendo uma estrutura offshore que alia praticidade a benefícios estratégicos exclusivos.</p>
+              
+              <p class="text-lg text-justify leading-relaxed text-gray-600 mt-9">Com soluções simples, eficientes e transparentes, nossos serviços são desenhados para atender às mais diversas necessidades, permitindo que nossos clientes aproveitem oportunidades de investimento globais com vantagens em sucessão, eficiência fiscal e proteção patrimonial. A estrutura offshore do Neela Bank facilita a preservação de bens e a otimização tributária, proporcionando segurança e flexibilidade na gestão do patrimônio – tanto no presente quanto para as gerações futuras.</p>
+              </p>
           </div>
         </div>
       </div>
     </section>
-
 
     <!-- CONECTANDO VOCÊ AO MERCADO GLOBAL -->
     <section class="py-10 bg-white sm:py-16 lg:py-24">
@@ -275,8 +332,7 @@
               Experiência de investimento intuitiva
             </h3>
             <p class="text-sm">
-              Adaptamos nossos serviços para oferecer uma experiência
-              personalizada e relevante.
+              Nossa plataforma é desenhada para ser intuitiva e fácil de usar, tornando a gestão de investimentos uma tarefa simples e acessível para todos.
             </p>
           </div>
         </div>
@@ -310,8 +366,7 @@
             <h3 class="text-xl font-bold mb-3">Otimização tributária
             </h3>
             <p class="text-sm">
-              Proporcionamos aos nossos clientes oportunidades de investimento
-              que normalmente estariam fora do alcance.
+              Oferecemos estratégicas de otimização fiscal para maximizar os retornos dos investimentos de nossos clientes.
             </p>
           </div>
         </div>
@@ -346,8 +401,7 @@
               Soluções de proteção patrimonial
             </h3>
             <p class="text-xs">
-              Facilitamos a entrada em mercados internacionais, ampliando
-              significativamente as opções de diversificação de portfólio.
+              Implementamos soluções para a proteção de partrimônio, garantindo a segurança e a privacidade dos ativos dos investidores.
             </p>
           </div>
         </div>
@@ -356,7 +410,7 @@
     </section>
 
     <!-- PRODUTOS INOVADORES DO NEELA BANK -->
-    <section class="py-12 sm:py-16 lg:py-20 bg-neela-bank-950">
+    <section id="produtos" class="py-12 sm:py-16 lg:py-20 bg-neela-bank-950">
       <div class="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-y-12 lg:gap-x-20">
           <div class="lg:col-span-3">
@@ -371,32 +425,33 @@
         <div class="grid grid-cols-1 gap-5 mt-12 lg:mt-16 lg:grid-cols-3">
           <div class="overflow-hidden rounded-lg bg-dark-gray">
             <div class="py-4 sm:py-6 lg:py-8">
-              <svg class="text-white h-11 w-11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="text-white w-11" fill="currentColor"><path d="M346.3 271.8l-60.1-21.9L214 448 32 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l512 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-261.9 0 64.1-176.2zm121.1-.2l-3.3 9.1 67.7 24.6c18.1 6.6 38-4.2 39.6-23.4c6.5-78.5-23.9-155.5-80.8-208.5c2 8 3.2 16.3 3.4 24.8l.2 6c1.8 57-7.3 113.8-26.8 167.4zM462 99.1c-1.1-34.4-22.5-64.8-54.4-77.4c-.9-.4-1.9-.7-2.8-1.1c-33-11.7-69.8-2.4-93.1 23.8l-4 4.5C272.4 88.3 245 134.2 226.8 184l-3.3 9.1L434 269.7l3.3-9.1c18.1-49.8 26.6-102.5 24.9-155.5l-.2-6zM107.2 112.9c-11.1 15.7-2.8 36.8 15.3 43.4l71 25.8 3.3-9.1c19.5-53.6 49.1-103 87.1-145.5l4-4.5c6.2-6.9 13.1-13 20.5-18.2c-79.6 2.5-154.7 42.2-201.2 108z"/></svg>
               <h3 class="mt-3 font-sans text-2xl font-normal text-white"> Neela Savings </h3>
-              <p class="mt-4 text-base font-normal text-opacity-50 text-white"> Non pretium mi, sagittis placerat. Elit risus malesuada ornare orci in. Tellus, tempor eget vitae aliquet suspendisse sed purus velit elit. </p>
-              <button class="bg-white p-3 px-8 rounded-full font-bold text-neela-bank-950 mt-6">Saiba mais </button>
+
+              <p class="text-base text-white mt-2 italic">O primeiro e único plano de aposentadoria em dólares para brasileiros. </p>
+
+              <p class="mt-4 text-sm font-normal text-opacity-50 text-white mb-8">Com foco na preservação e no crescimento do patrimônio a longo prazo, o Neela Savings oferece uma estrutura simples, segura e acessível para qualquer pessoa interessada em poupar e investir no exterior, começando com valores a partir de R$ 200.</p>
+              <a href="/aprovacao/neela-bank/produtos/neela-savings/" class="bg-white p-3 px-8 rounded-full font-bold text-neela-bank-950 mt-6">Saiba mais </a>
             </div>
           </div>
           <div class="overflow-hidden rounded-lg bg-dark-gray">
             <div class="py-4 sm:py-6 lg:py-8">
-              <svg class="text-white h-11 w-11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="text-white h-10" fill="currentColor"><path d="M224 64c44.2 0 80 35.8 80 80l0 48-160 0 0-48c0-44.2 35.8-80 80-80zM80 144l0 48-16 0c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-192c0-35.3-28.7-64-64-64l-16 0 0-48C368 64.5 303.5 0 224 0S80 64.5 80 144zM256 320l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32s32 14.3 32 32z"/></svg>
               <h3 class="mt-3 font-sans text-2xl font-normal text-white"> Conta patrominial </h3>
-              <p class="mt-4 text-base font-normal text-opacity-50 text-white"> Non pretium mi, sagittis placerat. Elit risus malesuada ornare orci in. Tellus, tempor eget vitae aliquet suspendisse sed purus velit elit. </p>
-              <button class="bg-white p-3 px-8 rounded-full font-bold text-neela-bank-950 mt-6">Saiba mais </button>
+              <p class="text-base text-white mt-2 italic">A proteção robusta de uma offhsore com a exclusividade de investimentos em Private Banking.</p>
+              <p class="mt-4 text-sm font-normal text-opacity-50 text-white mb-8">A conta patrimonial é uma solução de estrutura offshore que oferece aos clientes uma forma eficiente de proteger, organizar e gerir seu patrimônio de maneira segura e otimizada. Diferente das opções tradicionais do mercado a Conta Patrimonial Neela foi desenvolvida para ser acessível a um público mais amplo.</p>
+              <a href="/aprovacao/neela-bank/produtos/conta-patrimonial/" class="bg-white p-3 px-8 rounded-full font-bold text-neela-bank-950 mt-6">Saiba mais </a>
             </div>
           </div>
           <div class="overflow-hidden rounded-lg bg-dark-gray">
             <div class="py-4 sm:py-6 lg:py-8">
-              <svg class="text-white h-11 w-11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
-              </svg>
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="text-white h-11 w-11"  fill="currentColor"><path d="M160 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l50.7 0L9.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L256 109.3l0 50.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-128c0-17.7-14.3-32-32-32L160 0zM576 80a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM448 208a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM400 384a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm48 80a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm128 0a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM272 384a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm48 80a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM144 512a48 48 0 1 0 0-96 48 48 0 1 0 0 96zM576 336a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm-48-80a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg>
+              
               <h3 class="mt-3 font-sans text-2xl font-normal text-white"> Notas estruturadas estratégicas </h3>
-              <p class="mt-4 text-base font-normal text-opacity-50 text-white"> Non pretium mi, sagittis placerat. Elit risus malesuada ornare orci in. Tellus, tempor eget vitae aliquet suspendisse sed purus velit elit. </p>
-              <button class="bg-white p-3 px-8 rounded-full font-bold text-neela-bank-950 mt-6">Saiba mais </button>
+              <p class="text-base text-white mt-2 italic">A forma mais eficiente de alavancar sua rentabilidade com uma renda fixa protegida.</p>
+              <p class="mt-4 text-sm font-normal text-opacity-50 text-white mb-8">As Notas Estruturadas são uma solução de investimento internacional que combina a segurança de ativos tradicionais com o potencial de rentabilidade de açoes. Essas notas são produtos financeiros customizados, criados para atender a diferentes perfis de investidores.</p>
+              <a href="/aprovacao/neela-bank/produtos/notas-estruturadas/" class="bg-white p-3 px-8 rounded-full font-bold text-neela-bank-950 mt-6">Saiba mais </a>
             </div>
           </div>
           
@@ -544,7 +599,7 @@
             <p class="mt-2 text-base font-normal leading-7 text-gray-600 lg:text-lg lg:leading-8"> Assumimos as tarefas mais complexas e monótonas, como o câmbio e a execução de ordens. </p>
             <p class="mt-2 font-bold leading-7 text-gray-600 lg:text-lg lg:leading-8"> Todos os sistemas do Neela Bank são projetados para oferecer uma experência que faça o cliente se sentir seguro e valorizado. </p>
             <div class="flex flex-col items-center mt-12 space-y-5 sm:space-y-0 sm:space-x-5 sm:flex-row sm:justify-center lg:justify-start sm:mt-16">
-              <a href="https://apps.apple.com/br/app/neela-bank/id6478546732" title="" class="transition-all duration-200 hover:-translate-y-1" target="_blank" rel="noopener">
+              <a href="https://apps.apple.com/br/app/aprovacao/neela-bank/id6478546732" title="" class="transition-all duration-200 hover:-translate-y-1" target="_blank" rel="noopener">
                 <img class="object-cover w-auto h-16" src="https://landingfoliocom.imgix.net/store/collection/saasui/images/application/2/app-store.png" alt="" />
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.byebnk.app.neela" title="" class="transition-all duration-200 hover:-translate-y-1" target="_blank" rel="noopener">
@@ -559,9 +614,8 @@
       </div>
     </section>
 
-
     <!-- FAQ -->
-    <section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
+    <section id="faq" class="py-10 bg-gray-50 sm:py-16 lg:py-24">
       <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="max-w-2xl mx-auto text-center">
           <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">Perguntas mais frequentes</h2>
@@ -688,11 +742,11 @@
             </a>
           </div>
           <nav class="flex items-center justify-center space-x-6 sm:space-x-16 xl:space-x-20">
-            <a href="#" title="" class="text-base font-medium text-gray-100 transition-all duration-200 hover:-translate-y-1 hover:text-white"> Sobre nós </a>
-            <a href="#" title="" class="text-base font-medium text-gray-100 transition-all duration-200 hover:-translate-y-1 hover:text-white"> Produtos </a>
-            <a href="#" title="" class="text-base font-medium text-gray-100 transition-all duration-200 hover:-translate-y-1 hover:text-white"> Carreiras </a>
-            <a href="#" title="" class="text-base font-medium text-gray-100 transition-all duration-200 hover:-translate-y-1 hover:text-white"> FAQ </a>
-            <a href="#" title="" class="text-base font-medium text-gray-100 transition-all duration-200 hover:-translate-y-1 hover:text-white"> Abra sua conta </a>
+            <a href="/aprovacao/neela-bank/#sobre" title="" class="text-base font-medium text-gray-100 transition-all duration-200 hover:-translate-y-1 hover:text-white"> Sobre nós </a>
+            <a href="/aprovacao/neela-bank/#produtos" title="" class="text-base font-medium text-gray-100 transition-all duration-200 hover:-translate-y-1 hover:text-white"> Produtos </a>
+            <a href="/aprovacao/neela-bank/carreiras/" title="" class="text-base font-medium text-gray-100 transition-all duration-200 hover:-translate-y-1 hover:text-white"> Carreiras </a>
+            <a href="/aprovacao/neela-bank/#faq" title="" class="text-base font-medium text-gray-100 transition-all duration-200 hover:-translate-y-1 hover:text-white"> FAQ </a>
+            <a href="/aprovacao/neela-bank/#apps" title="" class="text-base font-medium text-gray-100 transition-all duration-200 hover:-translate-y-1 hover:text-white"> Abra sua conta </a>
           </nav>
           <ul class="flex items-center justify-end space-x-3">
             <li>
